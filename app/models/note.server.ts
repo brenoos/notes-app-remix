@@ -11,7 +11,7 @@ export function getNote({ id }: Pick<Note, "id">) {
   });
 }
 
-export function getNoteListItems() {
+export function getNoteList() {
   return prisma.note.findMany({
     select: { id: true, title: true },
     orderBy: { updatedAt: "desc" },
